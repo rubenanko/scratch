@@ -23,6 +23,8 @@ int print(string string);
 
 void * alloc(int size);
 
+int dealloc(void * pointer, int size);
+
 // constructors
 string String(const char * stringValue);
 

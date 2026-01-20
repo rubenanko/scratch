@@ -17,3 +17,12 @@ string String(const char * stringValue)
 
     return newString;
 }
+
+bool dString(string str)
+{
+    if(dealloc(str->ptr,str->length) == 0)
+        if(dealloc(str,sizeof(struct s_string)) == 0)
+            return true;
+
+    return false;
+}
