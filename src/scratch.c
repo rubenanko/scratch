@@ -3,8 +3,8 @@
 string String(const char * stringValue)
 {
     int stringSize = strlen(stringValue);
-    string newString = (string)malloc(sizeof(struct s_string));
-    newString->ptr = malloc(stringSize);
+    string newString = (string)alloc(sizeof(struct s_string));
+    newString->ptr = alloc(stringSize);
     
     while((*(stringValue) != 0))
     {
