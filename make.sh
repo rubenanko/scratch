@@ -15,7 +15,7 @@ objects=()
 for src in "${sources[@]}"; do
     obj="build/${src%.asm}.o"
     nasm -f elf64 "src/asm/$src" -o "$obj"
-    echo $src
+    echo "$src"
     objects+=("$obj")
 done
 
@@ -23,4 +23,4 @@ done
 gcc -c src/scratch.c -o build/scratchc.o -w
 echo scratch.c
 
-ld -r -o build/scratch.o build/scratchc.o ${objects[*]}
+ld -r -o build/scratch.o build/scratchc.o "${objects[*]}"
